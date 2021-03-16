@@ -4,6 +4,7 @@ import Cards from "./lib/Cards"
 import Wrapper from "./components/Layout/Wrapper"
 import Buttons from "./lib/Buttons/ButtonsWrapper"
 import Component from "./components/Component/Component"
+import AvatarWrapper from "./lib/Avatar/AvatarWrapper"
 
 export default function App() {
   return (
@@ -32,6 +33,15 @@ export default function App() {
               render={(routeProps) => (
                 <Wrapper>
                   <Buttons />
+                </Wrapper>
+              )}
+            />
+            <Route
+              path="/avatars"
+              exact
+              render={(routeProps) => (
+                <Wrapper>
+                  <AvatarWrapper />
                 </Wrapper>
               )}
             />

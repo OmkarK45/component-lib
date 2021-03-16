@@ -1,5 +1,3 @@
-import { useState } from "react"
-
 import ComponentHolder from "../../components/Container/ComponentHolder"
 import SectionHeader from "../../components/Section/SectionHeader"
 import Button from "./Button"
@@ -30,7 +28,7 @@ export default function ButtonWrapper() {
         title="Buttons"
         description="The Button component is used to trigger an action or event, such as submitting a form, opening a dialog, canceling an action, or performing a delete operation."
       />
-      <ComponentHolder code={commonStyles}>
+      <ComponentHolder title="Button" code={commonStyles}>
         <Button
           style={{ commonStyles, buttonSM, buttonR, buttonLG, buttonXL }}
         />

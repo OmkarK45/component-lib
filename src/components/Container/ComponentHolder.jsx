@@ -1,14 +1,14 @@
 import getURL from "./../../utils/getiFrameURL"
 import { FiExternalLink } from "react-icons/fi"
 import { useState } from "react"
-export default function ComponentHolder({ children, code }) {
+export default function ComponentHolder({ children, code, title }) {
   const [showCode, setShowCode] = useState(false)
   return (
     <div className="py-12">
       <div className="bg-white dark:bg-primary-600 dark:text-white overflow-hidden shadow rounded-lg">
         <div className="px-4 py-5 sm:px-6 flex justify-between">
           <div>
-            <p>Button</p>
+            <p>{title}</p>
           </div>
           <div>
             <button
