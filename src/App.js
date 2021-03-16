@@ -5,6 +5,7 @@ import Wrapper from "./components/Layout/Wrapper"
 import Buttons from "./lib/Buttons/ButtonsWrapper"
 import Component from "./components/Component/Component"
 import AvatarWrapper from "./lib/Avatar/AvatarWrapper"
+import AlertsWrapper from "./lib/Alerts/AlertsWrapper"
 
 export default function App() {
   return (
@@ -42,6 +43,15 @@ export default function App() {
               render={(routeProps) => (
                 <Wrapper>
                   <AvatarWrapper />
+                </Wrapper>
+              )}
+            />
+            <Route
+              path="/alerts"
+              exact
+              render={(routeProps) => (
+                <Wrapper>
+                  <AlertsWrapper />
                 </Wrapper>
               )}
             />
