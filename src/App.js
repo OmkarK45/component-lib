@@ -1,5 +1,6 @@
-import { Layout } from "@components"
+import { Layout } from "@components/"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+import Cards from "./lib/Cards"
 
 export default function App() {
   return (
@@ -7,6 +8,15 @@ export default function App() {
       <Router>
         <Switch>
           <Route path="/" exact />
+          <Route
+            path="/cards"
+            exact
+            render={(routeProps) => (
+              <Layout>
+                <Cards />
+              </Layout>
+            )}
+          />
         </Switch>
         <Layout />
       </Router>

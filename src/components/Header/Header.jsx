@@ -1,24 +1,21 @@
 import { Link } from "react-router-dom"
 import Toggle from "./../../context/themeToggle"
-import { useState } from "react"
 import { Sidenav } from "../Sidenav"
-export default function Header() {
-  const [hidden, setHidden] = useState(false)
-
+export default function Header({ hidden, setHidden }) {
   return (
     <div>
-      <nav className="bg-primary-800 sticky top-0 z-10">
+      <nav className="bg-white dark:bg-primary-800  sticky top-0 z-10 shadow-sm">
         <div className="w-full px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="lg:hidden">
-              <button className="text-white" onClick={() => setHidden(!hidden)}>
+              <button className="text-white" onClick={setHidden}>
                 toggle
               </button>
             </div>
             <div className="flex items-center">
               <Link
                 to="/"
-                className="flex-shrink-0 text-white text-lg font-semibold"
+                className="flex-shrink-0 text-primary-900 dark:text-white text-lg font-semibold"
               >
                 Doge UI
               </Link>
@@ -29,7 +26,6 @@ export default function Header() {
           </div>
         </div>
       </nav>
-      <Sidenav hidden={hidden} />
     </div>
   )
 }

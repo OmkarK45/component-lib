@@ -2,6 +2,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+*{
+  border: 1px solid red;
+}
 
 :root {
   --color-primary-100: #dee3ea;
