@@ -1,7 +1,12 @@
 import { useParams } from "react-router-dom"
+import Button from "./../../lib/Buttons/Button"
 
 export default function Component() {
   const component = useParams("component")
-  console.log(component)
-  return <div>{component.component}</div>
+  console.log(component.component)
+  return (
+    <div>
+      <Button>OK</Button>
+    </div>
+  )
 }

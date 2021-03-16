@@ -2,7 +2,7 @@ import { Layout } from "@components/"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import Cards from "./lib/Cards"
 import Wrapper from "./components/Layout/Wrapper"
-import Buttons from "./lib/Buttons/Buttons"
+import Buttons from "./lib/Buttons/ButtonsWrapper"
 import Component from "./components/Component/Component"
 
 export default function App() {
@@ -10,13 +10,13 @@ export default function App() {
     <div className=" dark:bg-primary-900 transition-all">
       <Router>
         <Switch>
+          <Route
+            path="/core/components/:component"
+            exact
+            component={Component}
+          />
           <Layout>
             <Route path="/" exact />
-            <Route
-              path="/core/components/:component"
-              exact
-              component={Component}
-            />
             <Route
               path="/cards"
               exact
