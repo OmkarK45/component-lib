@@ -6,13 +6,13 @@ export default function Header() {
   const [hidden, setHidden] = useState(false)
 
   return (
-    <>
-      <nav className="bg-primary-800">
+    <div>
+      <nav className="bg-primary-800 sticky top-0 z-10">
         <div className="w-full px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="lg:hidden">
               <button className="text-white" onClick={() => setHidden(!hidden)}>
-                toggle{" "}
+                toggle
               </button>
             </div>
             <div className="flex items-center">
@@ -30,6 +30,6 @@ export default function Header() {
         </div>
       </nav>
       <Sidenav hidden={hidden} />
-    </>
+    </div>
   )
 }
