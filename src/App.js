@@ -2,6 +2,8 @@ import { Layout } from "@components/"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import Cards from "./lib/Cards"
 import Wrapper from "./components/Layout/Wrapper"
+import Buttons from "./lib/Buttons/Buttons"
+import Component from "./components/Component/Component"
 
 export default function App() {
   return (
@@ -11,11 +13,25 @@ export default function App() {
           <Layout>
             <Route path="/" exact />
             <Route
+              path="/core/components/:component"
+              exact
+              component={Component}
+            />
+            <Route
               path="/cards"
               exact
               render={(routeProps) => (
                 <Wrapper>
                   <Cards />
+                </Wrapper>
+              )}
+            />
+            <Route
+              path="/buttons"
+              exact
+              render={(routeProps) => (
+                <Wrapper>
+                  <Buttons />
                 </Wrapper>
               )}
             />
