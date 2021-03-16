@@ -1,3 +1,8 @@
+import SectionHeader from "./../../components/Section/SectionHeader"
 export default function Cards() {
-  return <h1>card</h1>
+  return (
+    <div>
+      <SectionHeader title="Cards" description="Cards are important in web" />
+    </div>
+  )
 }

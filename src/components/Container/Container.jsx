@@ -1,13 +1,13 @@
-import Cards from "../../lib/Cards"
-
-export default function Container({ children }) {
+export default function Container({ hidden, children }) {
   return (
-    <div>
-      <div className="bg-white">
-        <div className="px-4 py-12 max-w-7xl mx-auto sm:px-6 lg:px-8">
-          {children}
-        </div>
-      </div>
+    <div
+      className={
+        hidden
+          ? "hidden lg:flex w-full sm:w-5/6  bg-white dark:bg-primary-900 px-4  py-12 sm:px-6 lg:px-8"
+          : "w-full sm:w-5/6 bg-white dark:bg-primary-900 px-4  py-12 sm:px-6 lg:px-8"
+      }
+    >
+      <div>{children}</div>
     </div>
   )
 }
