@@ -6,7 +6,7 @@ export default function Sidenav({ hidden }) {
     <div
       className={
         hidden
-          ? "block text-white sm:w-full  lg:w-1/6 z-10"
+          ? "block text-white sm:w-full h-full lg:w-1/6 z-10"
           : "hidden lg:block sm:w-1/6 text-white"
       }
     >

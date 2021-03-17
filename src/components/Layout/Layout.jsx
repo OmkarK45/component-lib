@@ -12,7 +12,7 @@ export default function Layout({ children }) {
   return (
     <div className="min-h-screen flex flex-col">
       <Header setHidden={handleSetHidden} />
-      <div className="flex bg-white">
+      <div className="flex bg-white dark:bg-primary-700">
         <Sidenav hidden={hidden} />
         <Container hidden={hidden}>{children}</Container>
       </div>
