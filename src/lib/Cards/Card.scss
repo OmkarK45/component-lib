@@ -1,0 +1,37 @@
+.card {
+  max-width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+.card-img-side {
+  max-width: 500px;
+  display: flex;
+  img {
+    object-fit: cover;
+  }
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+.card-body {
+  padding: 0.9rem;
+  p {
+    font-weight: normal;
+  }
+  button {
+    margin-top: 0.5rem;
+    color: white;
+    background-color: #319795;
+    padding: 0.5rem 0.7rem;
+    border-radius: 10px;
+  }
+}
