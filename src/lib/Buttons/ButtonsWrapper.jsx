@@ -1,12 +1,13 @@
-import ComponentHolder from "../../components/Container/ComponentHolder"
-import SectionHeader from "../../components/Section/SectionHeader"
-import { Button, OutlineButton } from "./Button"
 import "./Button.scss"
+import { Button, OutlineButton } from "./Button"
+import { ComponentHolder, SectionHeader } from "@components"
+
 export default function ButtonWrapper() {
   const solidBtn = `<button class="btn btn-sm">Button</button>
   <button class="btn btn-r">Button</button>
   <button class="btn btn-lg">Button</button>
   <button class="btn btn-xl">Button</button>`
+
   const outlineButtonCode = `
   <button class="btn btn-outline btn-sm">Button</button>
       <button class="btn btn-outline btn-r">Button</button>

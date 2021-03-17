@@ -1,13 +1,13 @@
-import { Layout } from "@components/"
+import { Layout, Wrapper, Component } from "@components/"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
-import Wrapper from "./components/Layout/Wrapper"
-import Component from "./components/Component/Component"
+
 import {
   AvatarWrapper,
   AlertsWrapper,
   BadgesWrapper,
   ButtonWrapper,
   CardsWrapper,
+  ImagesWrapper,
 } from "./lib"
 
 export default function App() {
@@ -22,6 +22,7 @@ export default function App() {
           />
           <Layout>
             <Route path="/" exact />
+            {/* Make these mapped and not hardcode */}
             <Route
               path="/cards"
               exact
@@ -64,6 +65,15 @@ export default function App() {
               render={(routeProps) => (
                 <Wrapper>
                   <BadgesWrapper />
+                </Wrapper>
+              )}
+            />
+            <Route
+              path="/images"
+              exact
+              render={(routeProps) => (
+                <Wrapper>
+                  <ImagesWrapper />
                 </Wrapper>
               )}
             />

@@ -1,3 +1,6 @@
 export * from "./Header"
 export * from "./Sidenav"
 export * from "./Layout"
+export * from "./Component"
+export * from "./Container"
+export * from "./Section"

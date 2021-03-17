@@ -1,6 +1,7 @@
-import SectionHeader from "../../components/Section/SectionHeader"
-import ComponentHolder from "./../../components/Container/ComponentHolder"
+import { ComponentHolder, SectionHeader } from "@components"
+
 import Avatar from "./Avatar"
+
 export default function AvatarWrapper() {
   const code = ` <img
   class="avatar avatar-sm"

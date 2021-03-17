@@ -1,5 +1,5 @@
-import ComponentHolder from "../../components/Container/ComponentHolder"
-import SectionHeader from "../../components/Section/SectionHeader"
+import { ComponentHolder, SectionHeader } from "@components"
+
 import { OutlineAlert, SolidAlert } from "./Alerts"
 
 const AlertsWrapper = () => {

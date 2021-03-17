@@ -1,6 +1,6 @@
-import ComponentHolder from "../../components/Container/ComponentHolder"
-import SectionHeader from "../../components/Section/SectionHeader"
-import { SolidBadges, OutlineBadges } from "./Badges"
+import { ComponentHolder, SectionHeader } from "@components"
+
+import { OutlineBadges, SolidBadges } from "./Badges"
 
 export default function BadgesWrapper() {
   const solidBadges = ` <span class="badge badge-success">Success</span>
