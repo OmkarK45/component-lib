@@ -2,10 +2,13 @@ import { Layout } from "@components/"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import Cards from "./lib/Cards"
 import Wrapper from "./components/Layout/Wrapper"
-import Buttons from "./lib/Buttons/ButtonsWrapper"
 import Component from "./components/Component/Component"
-import AvatarWrapper from "./lib/Avatar/AvatarWrapper"
-import AlertsWrapper from "./lib/Alerts/AlertsWrapper"
+import {
+  AvatarWrapper,
+  AlertsWrapper,
+  BadgesWrapper,
+  ButtonWrapper,
+} from "./lib"
 
 export default function App() {
   return (
@@ -33,7 +36,7 @@ export default function App() {
               exact
               render={(routeProps) => (
                 <Wrapper>
-                  <Buttons />
+                  <ButtonWrapper />
                 </Wrapper>
               )}
             />
@@ -52,6 +55,15 @@ export default function App() {
               render={(routeProps) => (
                 <Wrapper>
                   <AlertsWrapper />
+                </Wrapper>
+              )}
+            />
+            <Route
+              path="/badges"
+              exact
+              render={(routeProps) => (
+                <Wrapper>
+                  <BadgesWrapper />
                 </Wrapper>
               )}
             />

@@ -1,24 +1,25 @@
+import "./Avatar.scss"
 export default function Avatar({ style, code }) {
   console.log(style)
   return (
     <div className="flex items-center space-x-4">
       <img
-        style={{ ...style.commonStyles, ...style.avatarSM }}
+        className="avatar avatar-sm"
         src="https://bit.ly/kent-c-dodds"
         alt="Kent Bhaiyya"
       />
       <img
-        style={{ ...style.commonStyles, ...style.avatarMD }}
+        src="https://bit.ly/kent-c-dodds"
+        className="avatar avatar-md"
+        alt="cat"
+      />
+      <img
+        className="avatar avatar-lg"
         src="https://bit.ly/kent-c-dodds"
         alt="cat"
       />
       <img
-        style={{ ...style.commonStyles, ...style.avatarLG }}
-        src="https://bit.ly/kent-c-dodds"
-        alt="cat"
-      />
-      <img
-        style={{ ...style.commonStyles, ...style.avatarXL }}
+        className="avatar avatar-xl"
         src="https://bit.ly/kent-c-dodds"
         alt="cat"
       />

@@ -1,27 +1,38 @@
-import {
-  AiFillWarning,
-  AiFillInfoCircle,
-  AiFillCheckCircle,
-} from "react-icons/ai"
-import { FaTimesCircle } from "react-icons/fa"
+import "./Alerts.scss"
 
-const Alert = ({ code, style }) => {
+export const SolidAlert = () => {
   return (
     <div className="flex flex-col  space-y-4">
-      <div style={{ ...style.commonStyles, ...style.successAlert }}>
-        <AiFillCheckCircle fill="#38A169" /> File was uploaded to the server
+      <div className="alert alert-solid-success dark:text-black">
+        File was uploaded to the server
       </div>
-      <div style={{ ...style.commonStyles, ...style.errorAlert }}>
-        <FaTimesCircle fill="#E53E3E" /> Aw Snap, something bad happened.
+      <div className="alert alert-solid-error dark:text-black">
+        Aw Snap, something bad happened.
       </div>
-      <div style={{ ...style.commonStyles, ...style.warningAlert }}>
-        <AiFillWarning fill="#DD6B20" /> All of the data will be wiped.
+      <div className="alert alert-solid-warning dark:text-black">
+        All of the data will be wiped.
       </div>
-      <div style={{ ...style.commonStyles, ...style.infoAlert }}>
-        <AiFillInfoCircle fill="#3182CE" /> Your account will expire on 29 Feb
+      <div className="alert alert-solid-info dark:text-black">
+        Your account will expire on 29 Feb
       </div>
     </div>
   )
 }
-
-export default Alert
+export const OutlineAlert = () => {
+  return (
+    <div className="flex flex-col  space-y-4">
+      <div className="alert alert-outline-success dark:text-black">
+        File was uploaded to the server
+      </div>
+      <div className="alert alert-outline-error dark:text-black">
+        Aw Snap, something bad happened.
+      </div>
+      <div className="alert alert-outline-warning dark:text-black">
+        All of the data will be wiped.
+      </div>
+      <div className="alert alert-outline-info dark:text-black">
+        Your account will expire on 29 Feb
+      </div>
+    </div>
+  )
+}

@@ -1,2 +1,6 @@
 export { default as Dummy } from "./Dummy"
 export * from "./Cards"
+export { default as ButtonWrapper } from "./Buttons/ButtonsWrapper"
+export { default as AlertsWrapper } from "./Alerts/AlertsWrapper"
+export { default as AvatarWrapper } from "./Avatar/AvatarWrapper"
+export { default as BadgesWrapper } from "./Badges/BadgesWrapper"
