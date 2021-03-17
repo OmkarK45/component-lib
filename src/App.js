@@ -1,6 +1,5 @@
 import { Layout } from "@components/"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
-import Cards from "./lib/Cards"
 import Wrapper from "./components/Layout/Wrapper"
 import Component from "./components/Component/Component"
 import {
@@ -8,6 +7,7 @@ import {
   AlertsWrapper,
   BadgesWrapper,
   ButtonWrapper,
+  CardsWrapper,
 } from "./lib"
 
 export default function App() {
@@ -27,7 +27,7 @@ export default function App() {
               exact
               render={(routeProps) => (
                 <Wrapper>
-                  <Cards />
+                  <CardsWrapper />
                 </Wrapper>
               )}
             />

@@ -2,27 +2,26 @@ import SectionHeader from "../../components/Section/SectionHeader"
 import ComponentHolder from "./../../components/Container/ComponentHolder"
 import Avatar from "./Avatar"
 export default function AvatarWrapper() {
-  const code = `.avatar {
-    border-radius: 50%;
-    object-fit: cover;
-  }
-  .avatar-sm {
-    width: 3rem;
-    height: 3rem;
-  }
-  .avatar-md {
-    width: 4rem;
-    height: 4rem;
-  }
-  .avatar-lg {
-    width: 4.5rem;
-    height: 4.5rem;
-  }
-  .avatar-xl {
-    width: 5.5rem;
-    height: 5.5rem;
-  }
-  `
+  const code = ` <img
+  class="avatar avatar-sm"
+  src="https://bit.ly/kent-c-dodds"
+  alt="Kent Bhaiyya"
+/>
+<img
+  src="https://bit.ly/kent-c-dodds"
+  class="avatar avatar-md"
+  alt="cat"
+/>
+<img
+  class="avatar avatar-lg"
+  src="https://bit.ly/kent-c-dodds"
+  alt="cat"
+/>
+<img
+  class="avatar avatar-xl"
+  src="https://bit.ly/kent-c-dodds"
+  alt="cat"
+/>`
   return (
     <div>
       <SectionHeader

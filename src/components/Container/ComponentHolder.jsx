@@ -1,6 +1,7 @@
 import getURL from "./../../utils/getiFrameURL"
-import { FiExternalLink } from "react-icons/fi"
+import { HiOutlineCode, HiOutlineSparkles } from "react-icons/hi"
 import { useState } from "react"
+
 export default function ComponentHolder({ children, code, title }) {
   const [showCode, setShowCode] = useState(false)
   return (
@@ -15,7 +16,15 @@ export default function ComponentHolder({ children, code, title }) {
               onClick={() => setShowCode((showCode) => !showCode)}
               className="flex items-center"
             >
-              Code <FiExternalLink className="ml-2" />
+              {showCode ? (
+                <>
+                  Preview <HiOutlineSparkles className="ml-2" />
+                </>
+              ) : (
+                <>
+                  Code <HiOutlineCode className="ml-2" />
+                </>
+              )}
             </button>
           </div>
         </div>

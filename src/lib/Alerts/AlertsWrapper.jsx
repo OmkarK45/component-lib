@@ -3,30 +3,33 @@ import SectionHeader from "../../components/Section/SectionHeader"
 import { OutlineAlert, SolidAlert } from "./Alerts"
 
 const AlertsWrapper = () => {
-  const code = `.alert {
-  padding: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  display: flex;
-  align-items: center;
-}
-.alert-solid-success {
-  color: white;
-  background-color: #38A169;
-}
-.alert-solid-error {
-  color: white;
-  background-color: #E53E3E;
-}
-.alert-solid-warning {
-  color: white;
-  background-color: #DD6B20;
-}
-.alert-solid-info {
-  color: white;
-  background-color: #3182CE;
-}
-`
+  const code = ` 
+  <div class="alert alert-solid-success">
+    File was uploaded to the server
+  </div>
+  <div class="alert alert-solid-error">
+    Aw Snap, something bad happened.
+  </div>
+  <div class="alert alert-solid-warning">
+    All of the data will be wiped.
+  </div>
+  <div class="alert alert-solid-info">
+    Your account will expire on 29 Feb
+  </div>`
+  const alertBorder = `
+  <div class="alert alert-outline-success">
+  File was uploaded to the server
+</div>
+<div class="alert alert-outline-error">
+  Aw Snap, something bad happened.
+</div>
+<div class="alert alert-outline-warning">
+  All of the data will be wiped.
+</div>
+<div class="alert alert-outline-info">
+  Your account will expire on 29 Feb
+</div>
+  `
   return (
     <div>
       <SectionHeader
@@ -36,7 +39,7 @@ const AlertsWrapper = () => {
       <ComponentHolder title="Alerts with solid color" code={code}>
         <SolidAlert />
       </ComponentHolder>
-      <ComponentHolder title="Alerts with border" code={code}>
+      <ComponentHolder title="Alerts with border" code={alertBorder}>
         <OutlineAlert />
       </ComponentHolder>
     </div>

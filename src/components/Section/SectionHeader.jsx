@@ -1,10 +1,12 @@
 export default function SectionHeader({ title, description }) {
   return (
     <div className="pb-5 border-b border-gray-200">
-      <h3 className="text-3xl leading-6 font-extrabold text-gray-900 dark:text-white">
+      <h1 className="text-3xl font-extrabold text-gray-900 dark:text-gray-100 tracking-tight">
         {title}
-      </h3>
-      <p className="mt-2 max-w-4xl text-md text-gray-500">{description}</p>
+      </h1>
+      <p className="mt-2 max-w-4xl text-lg font-normal text-gray-500">
+        {description}
+      </p>
     </div>
   )
 }
