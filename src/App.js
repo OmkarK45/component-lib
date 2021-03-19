@@ -12,6 +12,7 @@ import {
   ListsWrapper,
   NavigationWrapper,
   ModalWrapper,
+  RatingsWrapper,
 } from "./lib"
 
 export default function App() {
@@ -26,7 +27,7 @@ export default function App() {
           />
           <Layout>
             <Route path="/" exact />
-            {/* Make these mapped and not hardcode */}
+            {/* Make these mapped and not hardcoded */}
             <Route
               path="/cards"
               exact
@@ -114,6 +115,15 @@ export default function App() {
               render={(routeProps) => (
                 <Wrapper>
                   <ModalWrapper />
+                </Wrapper>
+              )}
+            />
+            <Route
+              path="/rating"
+              exact
+              render={(routeProps) => (
+                <Wrapper>
+                  <RatingsWrapper />
                 </Wrapper>
               )}
             />
