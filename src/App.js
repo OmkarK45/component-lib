@@ -1,4 +1,5 @@
 import { Layout, Wrapper, Component } from "@components/"
+import { Home, GetStarted } from "@pages"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 
 import {
@@ -19,7 +20,7 @@ import {
 
 export default function App() {
   return (
-    <div className=" dark:bg-primary-900 transition-all">
+    <div className="dark:bg-primary-900 transition-all">
       <Router>
         <Switch>
           <Route
@@ -27,8 +28,10 @@ export default function App() {
             exact
             component={Component}
           />
+          <Route path="/" exact component={Home} />
           <Layout>
-            <Route path="/" exact />
+            <Route path="/get-started" exact component={GetStarted} />
+
             {/* Make these mapped and not hardcoded */}
             <Route
               path="/cards"
