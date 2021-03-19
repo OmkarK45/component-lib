@@ -9,8 +9,9 @@ import {
   CardsWrapper,
   ImagesWrapper,
   InputWrapper,
+  ListsWrapper,
+  NavigationWrapper,
 } from "./lib"
-import ListsWrapper from "./lib/Lists/ListsWrapper"
 
 export default function App() {
   return (
@@ -94,6 +95,15 @@ export default function App() {
               render={(routeProps) => (
                 <Wrapper>
                   <ListsWrapper />
+                </Wrapper>
+              )}
+            />
+            <Route
+              path="/navigation"
+              exact
+              render={(routeProps) => (
+                <Wrapper>
+                  <NavigationWrapper />
                 </Wrapper>
               )}
             />
