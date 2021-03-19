@@ -1,4 +1,5 @@
 import "./Inputs.scss"
+import { AiOutlineMail } from "react-icons/ai"
 export function Inputs() {
   return (
     <div className="flex flex-col space-x-1 items-start">
@@ -36,5 +37,9 @@ export function Inputs() {
   )
 }
 export function InputWithIcon() {
-  return "ok"
+  return (
+    <>
+      <p>Coming soon...</p>
+    </>
+  )
 }

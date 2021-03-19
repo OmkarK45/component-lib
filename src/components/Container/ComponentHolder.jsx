@@ -36,20 +36,23 @@ export default function ComponentHolder({ children, code, title }) {
         {showCode ? (
           <pre className="bg-primary-800 w-full overflow-x-auto text-gray-200 px-4 py-5 sm:p-6">
             {/* {code} */}
-            {loading ? (
+            {code && loading ? (
               <div className="flex items-center justify-center">
                 <Spinner /> Loading snippet...
               </div>
             ) : null}
-
-            <iframe
-              title="code"
-              loading="lazy"
-              onLoad={handleLoading}
-              className="w-full"
-              src={getURL("button")}
-              sandbox="allow-scripts allow-same-origin"
-            ></iframe>
+            {code ? (
+              <iframe
+                title="code"
+                loading="lazy"
+                onLoad={handleLoading}
+                className="w-full"
+                src={getURL(code)}
+                sandbox="allow-scripts allow-same-origin"
+              ></iframe>
+            ) : (
+              "No code snippet available."
+            )}
           </pre>
         ) : (
           <div className="bg-gray-100 dark:bg-primary-700 px-4 py-5 sm:p-6 overflow-x-auto">

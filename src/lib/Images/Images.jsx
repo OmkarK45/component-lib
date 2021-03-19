@@ -2,7 +2,7 @@ import "./Images.scss"
 export function CenteredImage() {
   return (
     <img
-      className="img-wrapper"
+      className="img-center"
       src="https://via.placeholder.com/150"
       alt="placeholder"
     />
