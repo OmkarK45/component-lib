@@ -13,6 +13,8 @@ import {
   NavigationWrapper,
   ModalWrapper,
   RatingsWrapper,
+  GridWrapper,
+  TypographyWrapper,
 } from "./lib"
 
 export default function App() {
@@ -124,6 +126,24 @@ export default function App() {
               render={(routeProps) => (
                 <Wrapper>
                   <RatingsWrapper />
+                </Wrapper>
+              )}
+            />
+            <Route
+              path="/simple-grid"
+              exact
+              render={(routeProps) => (
+                <Wrapper>
+                  <GridWrapper />
+                </Wrapper>
+              )}
+            />
+            <Route
+              path="/typography"
+              exact
+              render={(routeProps) => (
+                <Wrapper>
+                  <TypographyWrapper />
                 </Wrapper>
               )}
             />
