@@ -20,10 +20,10 @@ export default function Sidenav({ hidden }) {
               {links.map(({ to, Icon, name }) => {
                 return (
                   <NavLink
-                    activeClassName="bg-primary-100 text-gray-900 dark:text-gray-900 hover:text-primary-900 hover:bg-gray-100 group flex items-center px-2 py-2 text-sm font-bold rounded-md"
+                    activeClassName="bg-primary-100 text-gray-900 dark:text-gray-900 hover:text-primary-900 hover:bg-gray-100 group flex items-center px-2 py-2 text-md font-bold rounded-md"
                     key={name}
                     to={to}
-                    className="text-gray-600 dark:text-gray-50  hover:bg-primary-50 group flex items-center px-2 py-2 text-sm font-medium rounded-md"
+                    className="text-gray-600 dark:text-gray-50  hover:bg-primary-50 group flex items-center px-2 py-2 text-md  rounded-md"
                   >
                     <Icon fontSize="1rem" className="mr-3 h-6 w-6" />
                     {name}

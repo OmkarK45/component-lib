@@ -1,3 +1,5 @@
+import { snippets } from "./../lib/snippets.db"
+
 export default function getURL(component) {
-  return `/core/components/${component}`
+  return snippets[component].url
 }

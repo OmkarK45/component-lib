@@ -8,6 +8,7 @@ import {
   ButtonWrapper,
   CardsWrapper,
   ImagesWrapper,
+  InputWrapper,
 } from "./lib"
 
 export default function App() {
@@ -74,6 +75,15 @@ export default function App() {
               render={(routeProps) => (
                 <Wrapper>
                   <ImagesWrapper />
+                </Wrapper>
+              )}
+            />
+            <Route
+              path="/inputs"
+              exact
+              render={(routeProps) => (
+                <Wrapper>
+                  <InputWrapper />
                 </Wrapper>
               )}
             />
