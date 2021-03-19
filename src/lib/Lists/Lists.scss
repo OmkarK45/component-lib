@@ -1,0 +1,31 @@
+.list {
+  padding: 1rem 1.5rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style: none;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+.list-striped {
+  padding: 1rem 0;
+  li {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  li:nth-child(2n) {
+    background-color: #dee3ea;
+  }
+}
+.list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.list-item {
+  padding: 0.7rem 0;
+}
+.list-item:not(:last-child) {
+  border-bottom: 1px solid #dee3ea;
+}

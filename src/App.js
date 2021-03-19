@@ -10,6 +10,7 @@ import {
   ImagesWrapper,
   InputWrapper,
 } from "./lib"
+import ListsWrapper from "./lib/Lists/ListsWrapper"
 
 export default function App() {
   return (
@@ -84,6 +85,15 @@ export default function App() {
               render={(routeProps) => (
                 <Wrapper>
                   <InputWrapper />
+                </Wrapper>
+              )}
+            />
+            <Route
+              path="/lists"
+              exact
+              render={(routeProps) => (
+                <Wrapper>
+                  <ListsWrapper />
                 </Wrapper>
               )}
             />
