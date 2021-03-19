@@ -11,6 +11,7 @@ import {
   InputWrapper,
   ListsWrapper,
   NavigationWrapper,
+  ModalWrapper,
 } from "./lib"
 
 export default function App() {
@@ -104,6 +105,15 @@ export default function App() {
               render={(routeProps) => (
                 <Wrapper>
                   <NavigationWrapper />
+                </Wrapper>
+              )}
+            />
+            <Route
+              path="/modal"
+              exact
+              render={(routeProps) => (
+                <Wrapper>
+                  <ModalWrapper />
                 </Wrapper>
               )}
             />

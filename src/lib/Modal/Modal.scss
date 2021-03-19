@@ -1,0 +1,19 @@
+.modal {
+  background-color: white;
+  margin: 0 auto;
+  max-width: 300px;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+}
+.modal-body {
+  margin-top: 1rem;
+}
+.modal-footer {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row-reverse;
+  button {
+    padding: 0.2rem 0.6rem;
+    margin: 0 0.4rem;
+  }
+}
