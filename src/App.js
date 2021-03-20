@@ -1,4 +1,4 @@
-import { Layout, Wrapper, Component } from "@components/"
+import { Layout, Component } from "@components/"
 import { Home, GetStarted } from "@pages"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 
@@ -36,119 +36,67 @@ export default function App() {
             <Route
               path="/cards"
               exact
-              render={(routeProps) => (
-                <Wrapper>
-                  <CardsWrapper />
-                </Wrapper>
-              )}
+              render={(routeProps) => <CardsWrapper />}
             />
             <Route
               path="/buttons"
               exact
-              render={(routeProps) => (
-                <Wrapper>
-                  <ButtonWrapper />
-                </Wrapper>
-              )}
+              render={(routeProps) => <ButtonWrapper />}
             />
             <Route
               path="/avatars"
               exact
-              render={(routeProps) => (
-                <Wrapper>
-                  <AvatarWrapper />
-                </Wrapper>
-              )}
+              render={(routeProps) => <AvatarWrapper />}
             />
             <Route
               path="/alerts"
               exact
-              render={(routeProps) => (
-                <Wrapper>
-                  <AlertsWrapper />
-                </Wrapper>
-              )}
+              render={(routeProps) => <AlertsWrapper />}
             />
             <Route
               path="/badges"
               exact
-              render={(routeProps) => (
-                <Wrapper>
-                  <BadgesWrapper />
-                </Wrapper>
-              )}
+              render={(routeProps) => <BadgesWrapper />}
             />
             <Route
               path="/images"
               exact
-              render={(routeProps) => (
-                <Wrapper>
-                  <ImagesWrapper />
-                </Wrapper>
-              )}
+              render={(routeProps) => <ImagesWrapper />}
             />
             <Route
               path="/inputs"
               exact
-              render={(routeProps) => (
-                <Wrapper>
-                  <InputWrapper />
-                </Wrapper>
-              )}
+              render={(routeProps) => <InputWrapper />}
             />
             <Route
               path="/lists"
               exact
-              render={(routeProps) => (
-                <Wrapper>
-                  <ListsWrapper />
-                </Wrapper>
-              )}
+              render={(routeProps) => <ListsWrapper />}
             />
             <Route
               path="/navigation"
               exact
-              render={(routeProps) => (
-                <Wrapper>
-                  <NavigationWrapper />
-                </Wrapper>
-              )}
+              render={(routeProps) => <NavigationWrapper />}
             />
             <Route
               path="/modal"
               exact
-              render={(routeProps) => (
-                <Wrapper>
-                  <ModalWrapper />
-                </Wrapper>
-              )}
+              render={(routeProps) => <ModalWrapper />}
             />
             <Route
               path="/rating"
               exact
-              render={(routeProps) => (
-                <Wrapper>
-                  <RatingsWrapper />
-                </Wrapper>
-              )}
+              render={(routeProps) => <RatingsWrapper />}
             />
             <Route
               path="/simple-grid"
               exact
-              render={(routeProps) => (
-                <Wrapper>
-                  <GridWrapper />
-                </Wrapper>
-              )}
+              render={(routeProps) => <GridWrapper />}
             />
             <Route
               path="/typography"
               exact
-              render={(routeProps) => (
-                <Wrapper>
-                  <TypographyWrapper />
-                </Wrapper>
-              )}
+              render={(routeProps) => <TypographyWrapper />}
             />
           </Layout>
         </Switch>
