@@ -1,6 +1,8 @@
-import getURL from "./../../utils/getiFrameURL"
-import { HiOutlineCode, HiOutlineSparkles } from "react-icons/hi"
 import { useState } from "react"
+import { HiOutlineCode, HiOutlineSparkles } from "react-icons/hi"
+import { Resizable } from "re-resizable"
+
+import getURL from "./../../utils/getiFrameURL"
 import Spinner from "./../ui/Spinner"
 
 export default function ComponentHolder({ children, code, title }) {
@@ -22,20 +24,19 @@ export default function ComponentHolder({ children, code, title }) {
               className="flex items-center"
             >
               {showCode ? (
-                <>
+                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-sm font-medium bg-green-100 outline-none text-green-800">
                   Preview <HiOutlineSparkles className="ml-2" />
-                </>
+                </span>
               ) : (
-                <>
+                <span className="inline-flex outline-none items-center px-2.5 py-0.5 rounded-full text-sm font-medium bg-green-100 text-green-800">
                   Code <HiOutlineCode className="ml-2" />
-                </>
+                </span>
               )}
             </button>
           </div>
         </div>
         {showCode ? (
           <pre className="bg-primary-800 w-full overflow-x-auto text-gray-200 px-4 py-5 sm:p-6">
-            {/* {code} */}
             {code && loading ? (
               <div className="flex items-center justify-center">
                 <Spinner /> Loading snippet...
@@ -55,9 +56,11 @@ export default function ComponentHolder({ children, code, title }) {
             )}
           </pre>
         ) : (
-          <div className="bg-gray-100 dark:bg-primary-700 px-4 py-5 sm:p-6 overflow-x-auto">
-            {children}
-          </div>
+          <Resizable bounds="parent" minWidth={250}>
+            <div className="bg-gray-100 dark:bg-primary-700 px-4 py-5 sm:p-6 overflow-x-auto border-r border-gray-600">
+              {children}
+            </div>
+          </Resizable>
         )}
       </div>
     </div>

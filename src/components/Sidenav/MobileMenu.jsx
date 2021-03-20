@@ -1,4 +1,6 @@
 import { AiOutlineClose } from "react-icons/ai"
+import { links } from "./links"
+import { NavLink } from "react-router-dom"
 export default function MobileMenu({ handleSidebar }) {
   return (
     <div className="md:hidden">
@@ -42,20 +44,18 @@ export default function MobileMenu({ handleSidebar }) {
             </div>
             <nav className="mt-5 px-2 space-y-1">
               {/* Current: "bg-gray-100 text-gray-900", Default: "text-gray-600 hover:bg-gray-50 hover:text-gray-900" */}
-              <a
-                href="/"
-                className="bg-gray-100 text-gray-900 group flex items-center px-2 py-2 text-base font-medium rounded-md"
-              >
-                {/* Current: "text-gray-500", Default: "text-gray-400 group-hover:text-gray-500" */}
-                Dashboard
-              </a>
-
-              <a
-                href="/"
-                className="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-base font-medium rounded-md"
-              >
-                Team
-              </a>
+              {links.map(({ to, Icon, name }) => {
+                return (
+                  <NavLink
+                    to={to}
+                    activeClassName="bg-gray-100 text-gray-900 group flex items-center px-2 py-2 text-base font-medium rounded-md"
+                    className="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-base font-medium rounded-md"
+                  >
+                    {/* Current: "text-gray-500", Default: "text-gray-400 group-hover:text-gray-500" */}
+                    {name}
+                  </NavLink>
+                )
+              })}
             </nav>
           </div>
           <div className="flex-shrink-0 flex border-t border-gray-200 p-4">
