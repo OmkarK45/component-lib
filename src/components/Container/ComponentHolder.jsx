@@ -1,10 +1,11 @@
+import { Resizable } from "re-resizable"
 import { useRef, useState } from "react"
 import { HiOutlineCode, HiOutlineSparkles } from "react-icons/hi"
 import { MdContentCopy } from "react-icons/md"
-import { Resizable } from "re-resizable"
-import { IoPauseOutline } from "react-icons/io5"
+
 import getURL from "./../../utils/getiFrameURL"
 import Spinner from "./../ui/Spinner"
+import ResizeBar from "./ResizeBar"
 
 export default function ComponentHolder({ children, code, title }) {
   const [showCode, setShowCode] = useState(false)
@@ -72,7 +73,7 @@ export default function ComponentHolder({ children, code, title }) {
         ) : (
           <Resizable
             enable={{ top: false, bottom: false, left: false, right: true }}
-            handleComponent={{ right: <IoPauseOutline className="mr-4" /> }}
+            handleComponent={{ right: <ResizeBar /> }}
             bounds="parent"
             minWidth={250}
           >
