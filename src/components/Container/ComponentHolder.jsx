@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { HiOutlineCode, HiOutlineSparkles } from "react-icons/hi"
 import { Resizable } from "re-resizable"
-
+import { IoPauseOutline } from "react-icons/io5"
 import getURL from "./../../utils/getiFrameURL"
 import Spinner from "./../ui/Spinner"
 
@@ -56,7 +56,12 @@ export default function ComponentHolder({ children, code, title }) {
             )}
           </pre>
         ) : (
-          <Resizable bounds="parent" minWidth={250}>
+          <Resizable
+            enable={{ top: false, bottom: false, left: false, right: true }}
+            handleComponent={{ right: <IoPauseOutline className="mr-4" /> }}
+            bounds="parent"
+            minWidth={250}
+          >
             <div className="bg-gray-100 dark:bg-primary-700 px-4 py-5 sm:p-6 overflow-x-auto border-r border-gray-600">
               {children}
             </div>
