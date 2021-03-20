@@ -1,5 +1,6 @@
-import { useState } from "react"
+import { useRef, useState } from "react"
 import { HiOutlineCode, HiOutlineSparkles } from "react-icons/hi"
+import { MdContentCopy } from "react-icons/md"
 import { Resizable } from "re-resizable"
 import { IoPauseOutline } from "react-icons/io5"
 import getURL from "./../../utils/getiFrameURL"
@@ -7,9 +8,13 @@ import Spinner from "./../ui/Spinner"
 
 export default function ComponentHolder({ children, code, title }) {
   const [showCode, setShowCode] = useState(false)
+  const iframeRef = useRef(null)
   const [loading, setLoading] = useState(true)
   const handleLoading = () => {
     setLoading(false)
+  }
+  function handleCopy(code) {
+    navigator.clipboard.writeText(code)
   }
   return (
     <div className="py-12">
@@ -36,21 +41,30 @@ export default function ComponentHolder({ children, code, title }) {
           </div>
         </div>
         {showCode ? (
-          <pre className="bg-primary-800 w-full overflow-x-auto text-gray-200 px-4 py-5 sm:p-6">
+          <pre className="bg-primary-800 w-full overflow-x-auto  text-gray-200 px-4 py-5 sm:p-6">
             {code && loading ? (
               <div className="flex items-center justify-center">
                 <Spinner /> Loading snippet...
               </div>
             ) : null}
             {code ? (
-              <iframe
-                title="code"
-                loading="lazy"
-                onLoad={handleLoading}
-                className="w-full"
-                src={getURL(code)}
-                sandbox="allow-scripts allow-same-origin"
-              ></iframe>
+              <div className="relative">
+                <iframe
+                  title="code"
+                  loading="lazy"
+                  onLoad={handleLoading}
+                  className="w-full "
+                  src={getURL(code)}
+                  ref={iframeRef}
+                  sandbox="allow-scripts allow-same-origin"
+                ></iframe>
+                <button
+                  onClick={() => handleCopy(code)}
+                  className="bg-primary-300 flex items-center px-2 py-1 rounded-lg text-white absolute top-0 right-10"
+                >
+                  <MdContentCopy /> Copy
+                </button>
+              </div>
             ) : (
               "No code snippet available."
             )}
@@ -62,7 +76,7 @@ export default function ComponentHolder({ children, code, title }) {
             bounds="parent"
             minWidth={250}
           >
-            <div className="bg-gray-100 dark:bg-primary-700 px-4 py-5 sm:p-6 overflow-x-auto border-r border-gray-600">
+            <div className="bg-gray-100 dark:bg-primary-700 px-4 py-5 sm:p-6  border-r border-gray-600">
               {children}
             </div>
           </Resizable>

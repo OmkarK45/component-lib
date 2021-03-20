@@ -2,7 +2,7 @@ import "./Avatar.scss"
 export default function Avatar({ style, code }) {
   console.log(style)
   return (
-    <div className="flex items-center space-x-4">
+    <div className="flex items-center space-x-4 flex-wrap">
       <img
         className="avatar avatar-sm"
         src="https://bit.ly/kent-c-dodds"

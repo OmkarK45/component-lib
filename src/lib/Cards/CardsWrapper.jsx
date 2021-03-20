@@ -10,7 +10,7 @@ export default function CardsWrapper() {
         description="Used to display information to users, with button to trigger actions. These are very versatile and often found in eCommerce websites and blogs."
       />
       <ComponentHolder title="Card with image and action button" code={"cards"}>
-        <div className="flex flex-col space-y-5 space-x-6 sm:space-y-3 items-center sm:justify-center sm:flex-row">
+        <div className="flex flex-col space-y-5 space-x-6 sm:space-y-3 items-center sm:justify-center sm:flex-row flex-wrap">
           <CardWithImage image={true} />
           <CardWithImage2 />
         </div>
