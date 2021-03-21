@@ -57,7 +57,7 @@ export default function Home() {
                 websites faster.
               </h2>
               <p className="text-base text-gray-700 md:text-lg">
-                Doge UI is a tiny (200 B) CSS library that will give your
+                Doge UI is a tiny (5.59 KB) CSS library that will give your
                 development a jumpstart with proven primitives and styles.
               </p>
             </div>
