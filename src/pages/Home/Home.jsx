@@ -11,7 +11,7 @@ export default function Home() {
         <div className="max-w-xl sm:mx-auto lg:max-w-2xl">
           <div className="flex flex-col mb-16 sm:text-center sm:mb-0">
             <a href="/" className="mb-6 sm:mx-auto">
-              <div className="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-50">
+              <div className="flex items-center justify-center w-12 h-12 rounded-full bg-yellow-50">
                 <svg
                   className="w-10 h-10"
                   stroke="currentColor"
@@ -65,13 +65,13 @@ export default function Home() {
               <a
                 // replace this with type='download'
                 href="/dist/"
-                className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-tight text-white transition duration-200 rounded-lg shadow-md bg-red-500 hover:bg-red-700 focus:shadow-outline focus:outline-none"
+                className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-tight text-white transition duration-200 rounded-lg shadow-md bg-yellow-600 hover:bg-yellow-800 focus:shadow-outline focus:outline-none"
               >
                 <HiOutlineDownload className="text-lg mr-2" /> Download
               </a>
               <a
                 href="/get-started"
-                className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-tight text-red-700 transition duration-200 rounded-lg shadow-md border-2 border-red-700 hover:text-red-800 focus:shadow-outline focus:outline-none"
+                className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-tight text-red-700 transition duration-200 rounded-lg shadow-md border-2 border-yellow-700 hover:text-red-800 focus:shadow-outline focus:outline-none"
               >
                 Get Started <HiArrowRight className="ml-2" />
               </a>
