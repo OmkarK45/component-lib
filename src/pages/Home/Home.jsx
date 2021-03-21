@@ -64,7 +64,8 @@ export default function Home() {
             <div className="flex items-center justify-center space-x-5">
               <a
                 // replace this with type='download'
-                href="/dist/"
+                download="dogeui.min.css"
+                href="/dist/css/dogeui.min.css"
                 className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-tight text-white transition duration-200 rounded-lg shadow-md bg-yellow-600 hover:bg-yellow-800 focus:shadow-outline focus:outline-none"
               >
                 <HiOutlineDownload className="text-lg mr-2" /> Download
