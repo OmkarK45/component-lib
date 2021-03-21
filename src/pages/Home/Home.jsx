@@ -1,8 +1,12 @@
+import { Helmet } from "react-helmet-async"
 import { HiOutlineDownload, HiArrowRight } from "react-icons/hi"
 import { Footer } from "../../components/ui"
 export default function Home() {
   return (
     <>
+      <Helmet>
+        <title>Doge-UI | A tiny CSS Component Library.</title>
+      </Helmet>
       <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
         <div className="max-w-xl sm:mx-auto lg:max-w-2xl">
           <div className="flex flex-col mb-16 sm:text-center sm:mb-0">

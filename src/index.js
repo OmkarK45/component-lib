@@ -3,13 +3,13 @@ import ReactDOM from "react-dom"
 import "./index.css"
 import App from "./App"
 import reportWebVitals from "./reportWebVitals"
-import { ThemeProvider } from "./context/themeContext"
+import { HelmetProvider } from "react-helmet-async"
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider>
+    <HelmetProvider>
       <App />
-    </ThemeProvider>
+    </HelmetProvider>
   </React.StrictMode>,
   document.getElementById("root")
 )

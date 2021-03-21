@@ -17,6 +17,10 @@ import {
 
 export const links = [
   {
+    to: "/get-started",
+    name: "Get Started",
+  },
+  {
     to: "/avatars",
     name: "Avatars",
     Icon: BiUserCircle,
