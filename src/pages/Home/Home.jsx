@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async"
 import { HiOutlineDownload, HiArrowRight } from "react-icons/hi"
-import { Footer } from "../../components/ui"
+import { Footer } from "@components"
 export default function Home() {
   return (
     <>
@@ -58,12 +58,11 @@ export default function Home() {
               </h2>
               <p className="text-base text-gray-700 md:text-lg">
                 Doge UI is a tiny (5.59 KB) CSS library that will give your
-                development a jumpstart with proven primitives and styles.
+                development a jumpstart with ready-made components and styles.
               </p>
             </div>
             <div className="flex items-center justify-center space-x-5">
               <a
-                // replace this with type='download'
                 download="dogeui.min.css"
                 href="/dist/css/dogeui.min.css"
                 className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-tight text-white transition duration-200 rounded-lg shadow-md bg-yellow-600 hover:bg-yellow-800 focus:shadow-outline focus:outline-none"
