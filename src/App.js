@@ -1,5 +1,5 @@
 import { Layout } from "@components/"
-import { Home, NotFound } from "@pages"
+import { Home, NotFound, Test } from "@pages"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import { Routes } from "./Routes"
 
@@ -8,7 +8,7 @@ export default function App() {
     <Router>
       <Switch>
         <Route path="/" exact component={Home} />
-
+        <Route path="/test" exact component={Test} />
         <Layout>
           {Routes.map((route) => {
             return (

@@ -1,24 +1,35 @@
 import { AiOutlineClose } from "react-icons/ai"
+import { Transition } from "@headlessui/react"
 import { links } from "./links"
 import { NavLink } from "react-router-dom"
-export default function MobileMenu({ handleSidebar }) {
+export default function MobileMenu({ handleSidebar, sidebarOpen }) {
+  console.log(sidebarOpen)
   return (
     <div className="md:hidden">
       <div className="fixed inset-0 flex z-40">
-        <div
+        <Transition
+          unmount={false}
+          show={sidebarOpen}
           onClick={handleSidebar}
-          data-todo-x-transition-enter="transition-opacity ease-linear duration-300"
-          data-todo-x-transition-enter-start="opacity-0"
-          data-todo-x-transition-enter-end="opacity-100"
-          data-todo-x-transition-leave="transition-opacity ease-linear duration-300"
-          data-todo-x-transition-leave-start="opacity-100"
-          data-todo-x-transition-leave-end="opacity-0"
+          enter="transition-opacity ease-linear duration-300"
+          enterFrom="opacity-0"
+          enterTo="opacity-100"
+          leave="transition-opacity ease-linear duration-300"
+          leaveFrom="opacity-100"
+          leaveTo="opacity-0"
           className="fixed inset-0"
         >
           <div className="absolute inset-0 bg-gray-600 opacity-75"></div>
-        </div>
-        <div
-          data-todo-x-show="sidebarOpen"
+        </Transition>
+        <Transition
+          show={sidebarOpen}
+          unmount={false}
+          enter="transition ease-in-out duration-300 transform"
+          enterFrom="-translate-x-full"
+          enterTo="translate-x-0"
+          leave="transition ease-in-out duration-300 transform"
+          leaveFrom="translate-x-0"
+          leaveTo="-translate-x-full"
           className="relative flex-1 flex flex-col max-w-xs w-full bg-white"
         >
           <div className="absolute top-0 right-0 -mr-12 pt-2">
@@ -43,15 +54,14 @@ export default function MobileMenu({ handleSidebar }) {
               </a>
             </div>
             <nav className="mt-5 px-2 space-y-1">
-              {/* Current: "bg-gray-100 text-gray-900", Default: "text-gray-600 hover:bg-gray-50 hover:text-gray-900" */}
               {links.map(({ to, Icon, name }) => {
                 return (
                   <NavLink
                     to={to}
+                    key={name}
                     activeClassName="bg-gray-100 text-gray-900 group flex items-center px-2 py-2 text-base font-medium rounded-md"
                     className="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-base font-medium rounded-md"
                   >
-                    {/* Current: "text-gray-500", Default: "text-gray-400 group-hover:text-gray-500" */}
                     {name}
                   </NavLink>
                 )
@@ -69,10 +79,8 @@ export default function MobileMenu({ handleSidebar }) {
               </div>
             </a>
           </div>
-        </div>
-        <div className="flex-shrink-0 w-14">
-          {/* Force sidebar to shrink to fit close icon */}
-        </div>
+        </Transition>
+        <div className="flex-shrink-0 w-14"></div>
       </div>
     </div>
   )

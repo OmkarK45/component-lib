@@ -1,3 +1,4 @@
+import { Transition } from "@headlessui/react"
 import { useState } from "react"
 import { Link, NavLink } from "react-router-dom"
 
@@ -14,7 +15,12 @@ const Main = ({ children }) => {
     <>
       <div style={{ minHeight: "640px" }} className="bg-gray-100">
         <div className="h-screen flex overflow-hidden bg-white">
-          {sidebarOpen ? <MobileMenu handleSidebar={handleSidebar} /> : null}
+          <Transition show={sidebarOpen}>
+            <MobileMenu
+              handleSidebar={handleSidebar}
+              sidebarOpen={sidebarOpen}
+            />
+          </Transition>
           <div className="hidden md:flex md:flex-shrink-0">
             <div className="flex flex-col w-64">
               <div className="flex flex-col h-0 flex-1 border-r border-gray-200 bg-white">
